@@ -14,9 +14,9 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const InquirySection = () => {
   return (
-    <div className="bg-neutral-100">
-      <section className="max-w-[1440px] mx-auto px-12 py-12">
-        <div className="grid grid-cols-2 gap-12">
+    <div id="contact" className="bg-neutral-100  my-20">
+      <section className="w-11/12 mx-auto py-20">
+        <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-12">
           <div className="flex flex-col gap-4">
             <h2 className="font-bold text-3xl leading-9 tracking-tight">
               Have questions?

@@ -10,8 +10,8 @@ const GetStarted = () => {
       style={{ opacity: isInView ? 1 : 0 }} // Hides element until scrolled into view
       className={isInView ? "animate__animated animate__zoomIn" : ""}
     >
-      <section className="max-w-[1440px] mt-20 mx-auto px-12 pb-12">
-        <div className="text-center rounded-3xl bg-neutral-900 text-neutral-50 flex p-12 flex-col items-center gap-6">
+      <section className="w-11/12 mt-20 mx-auto ">
+        <div className="text-center rounded-3xl bg-neutral-900 text-neutral-50 flex max-sm:px-2 max-sm:py-6 p-12 flex-col items-center gap-6">
           <h2 className="font-bold text-4xl leading-10 tracking-tight">
             Ready to Get Started?
           </h2>

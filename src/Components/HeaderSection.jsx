@@ -3,8 +3,8 @@ import { ArrowRight, Check, Play, Sparkles } from "lucide-react";
 
 const HeaderSection = () => {
   return (
-    <section className="max-w-[1440px] mx-auto p-12 ">
-      <div className="grid grid-cols-2 items-center gap-12">
+    <section className="max-w-11/12 mx-auto py-12 ">
+      <div className="grid max-sm:grid-cols-1 grid-cols-2  items-center gap-12">
         <div className="flex flex-col gap-6 animate__animated animate__fadeInLeft">
           <Chip className="rounded-full  w-fit text-sm px-6 py-2 bg-green-50 text-green-900 border border-green-200">
             <Sparkles className="size-3 mr-1" />
@@ -18,12 +18,15 @@ const HeaderSection = () => {
             FlowSuite brings projects, docs, and communication together so your
             team ships faster. Automate the busywork and focus on what matters.
           </p>
-          <div className="flex items-center gap-4">
-            <Button className="bg-neutral-900 text-neutral-50 text-base leading-6 px-8 h-12">
+          <div className="flex max-sm:flex-col  items-center gap-4">
+            <Button className="bg-neutral-900 text-neutral-50 text-base leading-6 px-8 h-12 max-sm:w-full">
               Get Started
               <ArrowRight className="size-4 ml-2" />
             </Button>
-            <Button variant="outline" className="text-base leading-6 px-8 h-12">
+            <Button
+              variant="outline"
+              className="text-base leading-6 px-8 h-12 max-sm:w-full"
+            >
               <Play className="size-4 mr-2" />
               Watch demo
             </Button>
@@ -41,13 +44,12 @@ const HeaderSection = () => {
         </div>
         <div className="relative shadow-sm rounded-3xl border-neutral-200 border-1 border-solid overflow-hidden animate__animated animate__fadeIn delay-1.5s">
           <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODc2NDd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHNjcmVlbiUyMHNvZnR3YXJlfGVufDF8MHx8fDE3ODc5MzQ3NDF8MA&ixlib=rb-4.1.0&q=80&w=400"
+            src="https://miro.medium.com/v2/resize:fit:1358/1*R1Lp_7Axmf6ARksW_bfTGg.png"
             alt="Product dashboard"
             className="object-cover w-full h-105"
             data-photoid="JKUTrJ4vK00"
-            data-authorname="Luke Chesser"
-            data-authorurl="https://unsplash.com/@lukechesser"
-            data-blurhash="LUDvl^00-;9Z~qM{IUt7_2M_Ios:"
+            data-authorname="Miro"
+            data-authorurl="https://miro.medium.com/"
           />
         </div>
       </div>

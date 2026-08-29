@@ -1,13 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@heroui/react";
+import { Card, CardContent, CardHeader, CardTitle, Chip } from "@heroui/react";
 import { Gauge, Headset, Puzzle, ShieldCheck } from "lucide-react";
 
 const FeatureSection = () => {
   return (
-    <section className="max-w-[1440px] mx-auto p-12 animate__animated animate__fadeInUp">
+    <section
+      id="features"
+      className="w-11/12 mx-auto mt-20 animate__animated animate__fadeInUp"
+    >
       <div className="text-center flex pb-8 flex-col items-center gap-2">
-        <span className="font-semibold uppercase text-neutral-900 text-sm leading-5 tracking-wide">
+        <Chip className="font-semibold uppercase text-green-900 text-sm leading-5 tracking-wide bg-green-100">
           Features
-        </span>
+        </Chip>
         <h2 className="font-bold text-neutral-900 text-3xl leading-9 tracking-tight">
           Everything you need to move faster
         </h2>
@@ -16,7 +19,7 @@ const FeatureSection = () => {
           productive.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <Card className="p-6 gap-4">
           <CardHeader className="p-0 gap-2">
             <div className="size-12 rounded-xl bg-neutral-100 text-neutral-900 flex justify-center items-center">
