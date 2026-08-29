@@ -16,6 +16,8 @@ const BenefitsSection = () => {
         <div className="grid max-sm:grid-cols-1 grid-cols-2 items-center gap-12">
           <div className="relative shadow-sm rounded-3xl border-neutral-200 border-1 border-solid overflow-hidden">
             <img
+              loading="lazy"
+              decoding="async"
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODc2NDd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHNvZnR3YXJlJTIwZGFzaGJvYXJkJTIwd29ya3NwYWNlfGVufDF8MHx8fDE3ODc5MzQ3Mzh8MA&ixlib=rb-4.1.0&q=80&w=400"
               alt="Team collaborating"
               className="object-cover w-full h-110"
