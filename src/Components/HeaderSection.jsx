@@ -42,16 +42,15 @@ const HeaderSection = () => {
             </div>
           </div>
         </div>
-        <div className="relative shadow-sm rounded-3xl border-neutral-200 border-1 border-solid overflow-hidden animate__animated animate__fadeIn delay-1.5s">
+        <div className="relative  rounded-3xl  overflow-hidden animate__animated animate__fadeIn delay-1.5s">
           <img
             loading="lazy"
             decoding="async"
-            src="https://miro.medium.com/v2/resize:fit:1358/1*R1Lp_7Axmf6ARksW_bfTGg.png"
+            width="600"
+            height="400"
+            src="/banner.png"
             alt="Product dashboard"
             className="object-cover w-full h-auto min-h-70"
-            data-photoid="JKUTrJ4vK00"
-            data-authorname="Miro"
-            data-authorurl="https://miro.medium.com/"
           />
         </div>
       </div>

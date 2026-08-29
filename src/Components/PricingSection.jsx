@@ -14,9 +14,7 @@ import { useInView } from "./useInView";
 const PricingSection = () => {
   const [check, setCheck] = useState("monthly");
   const handleChange = (value) => {
-    console.log("Selected value:", value);
     setCheck(value);
-    console.log("Selected value:", check);
   };
   const [ref, isInView] = useInView({ threshold: 0.2 });
   const [yref, isyInView] = useInView({ threshold: 0.2 });

@@ -19,7 +19,6 @@ const InquirySection = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    console.log("Form Data:", data);
   };
   return (
     <div id="contact" className="bg-neutral-100  mt-20">
