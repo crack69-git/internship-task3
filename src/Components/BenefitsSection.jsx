@@ -1,9 +1,17 @@
 import { Button } from "@heroui/react";
 import { ArrowRight, Check } from "lucide-react";
+import { useInView } from "./useInView";
+import "animate.css"; // Ensure Animate.css is imported
 
 const BenefitsSection = () => {
+  const [ref, isInView] = useInView({ threshold: 0.2 });
+
   return (
-    <div>
+    <div
+      ref={ref}
+      style={{ opacity: isInView ? 1 : 0 }} // Hides element until scrolled into view
+      className={isInView ? "animate__animated animate__fadeInUp" : ""}
+    >
       <section className="max-w-[1440px] mx-auto p-12">
         <div className="grid grid-cols-2 items-center gap-12">
           <div className="relative shadow-sm rounded-3xl border-neutral-200 border-1 border-solid overflow-hidden">
@@ -11,10 +19,6 @@ const BenefitsSection = () => {
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODc2NDd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHNvZnR3YXJlJTIwZGFzaGJvYXJkJTIwd29ya3NwYWNlfGVufDF8MHx8fDE3ODc5MzQ3Mzh8MA&ixlib=rb-4.1.0&q=80&w=400"
               alt="Team collaborating"
               className="object-cover w-full h-110"
-              data-photoid="QckxruozjRg"
-              data-authorname="Annie Spratt"
-              data-authorurl="https://unsplash.com/@anniespratt"
-              data-blurhash="LDBWPfR+W;tR~Wt8kCt7$#t7oztR"
             />
           </div>
           <div className="flex flex-col gap-6">
@@ -79,7 +83,6 @@ const BenefitsSection = () => {
           </div>
         </div>
       </section>
-      ;
     </div>
   );
 };

@@ -10,6 +10,7 @@ import {
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { Check, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
+import { useInView } from "./useInView";
 const PricingSection = () => {
   const [check, setCheck] = useState("monthly");
   const handleChange = (value) => {
@@ -17,9 +18,9 @@ const PricingSection = () => {
     setCheck(value);
     console.log("Selected value:", check);
   };
-
+  const [ref, isInView] = useInView({ threshold: 0.2 });
   return (
-    <div className="w-11/12 mx-auto">
+    <div className={`  w-11/12 mx-auto`}>
       <div className="text-center flex flex-col items-center gap-4">
         <Chip className="bg-neutral-200 text-neutral-900">Pricing</Chip>
         <h2 className="font-bold text-4xl leading-10 tracking-tight">
@@ -48,7 +49,11 @@ const PricingSection = () => {
       <div
         className={` grid-cols-3 max-sm:grid-cols-1 mt-8 gap-6 ${check === "yearly" ? "hidden" : "grid"}`}
       >
-        <Card className="p-6 gap-6">
+        <Card
+          ref={ref}
+          style={{ opacity: isInView ? 1 : 0 }}
+          className={` ${isInView ? "animate__animated animate__fadeInLeft" : ""} p-6 gap-6`}
+        >
           <CardHeader className="p-0 gap-2">
             <CardTitle className="text-lg leading-7">Basic</CardTitle>
             <Card.Description>
@@ -91,7 +96,11 @@ const PricingSection = () => {
             </Button>
           </CardFooter>
         </Card>
-        <Card className="relative shadow-lg border-neutral-900  border-0 border-solid p-6 gap-6 ">
+        <Card
+          ref={ref}
+          style={{ opacity: isInView ? 1 : 0 }}
+          className={` ${isInView ? "animate__animated animate__fadeInUp" : ""} relative shadow-lg border-neutral-900  border-0 border-solid p-6 gap-6 `}
+        >
           <div className="left-1/2 -translate-x-1/2 absolute -top-3">
             <Chip className="bg-neutral-900 text-neutral-50">Most Popular</Chip>
           </div>
@@ -137,7 +146,11 @@ const PricingSection = () => {
             </Button>
           </CardFooter>
         </Card>
-        <Card className="p-6 gap-6">
+        <Card
+          ref={ref}
+          style={{ opacity: isInView ? 1 : 0 }}
+          className={` ${isInView ? "animate__animated animate__fadeInRight" : ""} p-6 gap-6`}
+        >
           <CardHeader className="p-0 gap-2">
             <CardTitle className="text-lg leading-7">Premium</CardTitle>
             <Card.Description>For organizations at scale.</Card.Description>

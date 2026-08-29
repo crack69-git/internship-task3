@@ -3,7 +3,7 @@ import { DollarSign, Home, Layers, Mail, Zap } from "lucide-react";
 
 const NavbarSection = () => {
   return (
-    <header className="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid w-full">
+    <header className="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid w-full animate__animated animate__fadeInDown">
       <div className="max-w-[1440px] flex mx-auto px-12 py-4 justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="size-8 rounded-lg bg-neutral-900 text-neutral-50 flex justify-center items-center">

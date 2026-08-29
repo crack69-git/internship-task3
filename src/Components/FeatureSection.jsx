@@ -3,7 +3,7 @@ import { Gauge, Headset, Puzzle, ShieldCheck } from "lucide-react";
 
 const FeatureSection = () => {
   return (
-    <section className="max-w-[1440px] mx-auto p-12">
+    <section className="max-w-[1440px] mx-auto p-12 animate__animated animate__fadeInUp">
       <div className="text-center flex pb-8 flex-col items-center gap-2">
         <span className="font-semibold uppercase text-neutral-900 text-sm leading-5 tracking-wide">
           Features

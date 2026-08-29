@@ -1,9 +1,15 @@
 import { Button } from "@heroui/react";
 import { ArrowRight } from "lucide-react";
+import { useInView } from "./useInView";
 
 const GetStarted = () => {
+  const [ref, isInView] = useInView({ threshold: 0.2 });
   return (
-    <div>
+    <div
+      ref={ref}
+      style={{ opacity: isInView ? 1 : 0 }} // Hides element until scrolled into view
+      className={isInView ? "animate__animated animate__zoomIn" : ""}
+    >
       <section className="max-w-[1440px] mt-20 mx-auto px-12 pb-12">
         <div className="text-center rounded-3xl bg-neutral-900 text-neutral-50 flex p-12 flex-col items-center gap-6">
           <h2 className="font-bold text-4xl leading-10 tracking-tight">
