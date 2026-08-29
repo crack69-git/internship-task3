@@ -16,7 +16,7 @@ const BenefitsSection = () => {
         <div className="grid max-sm:grid-cols-1 grid-cols-2 items-center gap-12">
           <div className="relative shadow-sm rounded-3xl border-neutral-200 border-1 border-solid overflow-hidden">
             <img
-              loading="lazy"
+              fetchpriority="high"
               decoding="async"
               width="400"
               height="400"
