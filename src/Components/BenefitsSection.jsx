@@ -36,8 +36,8 @@ const BenefitsSection = () => {
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
-                <div className="size-6 shrink-0 rounded-full bg-neutral-900 text-neutral-50 flex mt-0.5 justify-center items-center">
-                  <Check className="size-4" />
+                <div className="size-6 shrink-0 rounded-full bg-neutral-200 text-neutral-50 flex mt-0.5 justify-center items-center">
+                  <Check className="size-4" color="green" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="font-semibold text-neutral-900">
@@ -50,8 +50,8 @@ const BenefitsSection = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 shrink-0 rounded-full bg-neutral-900 text-neutral-50 flex mt-0.5 justify-center items-center">
-                  <Check className="size-4" />
+                <div className="size-6 shrink-0 rounded-full bg-neutral-200 text-neutral-50 flex mt-0.5 justify-center items-center">
+                  <Check className="size-4" color="green" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="font-semibold text-neutral-900">
@@ -64,8 +64,8 @@ const BenefitsSection = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 shrink-0 rounded-full bg-neutral-900 text-neutral-50 flex mt-0.5 justify-center items-center">
-                  <Check className="size-4" />
+                <div className="size-6 shrink-0 rounded-full bg-neutral-200 text-neutral-50 flex mt-0.5 justify-center items-center">
+                  <Check className="size-4" color="green" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="font-semibold text-neutral-900">
@@ -78,7 +78,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
             </div>
-            <Button className="bg-neutral-900 text-neutral-50 px-8 max-sm:w-full w-fit h-11">
+            <Button className="bg-green-800 hover:bg-green-950 text-neutral-50 px-8 max-sm:w-full w-fit h-11">
               Start free trial
               <ArrowRight className="size-4 ml-2" />
             </Button>

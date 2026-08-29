@@ -19,13 +19,13 @@ const HeaderSection = () => {
             team ships faster. Automate the busywork and focus on what matters.
           </p>
           <div className="flex max-sm:flex-col  items-center gap-4">
-            <Button className="bg-neutral-900 text-neutral-50 text-base leading-6 px-8 h-12 max-sm:w-full">
+            <Button className="bg-green-800 hover:bg-green-950 text-neutral-50 text-base leading-6 px-8 h-12 max-sm:w-full">
               Get Started
               <ArrowRight className="size-4 ml-2" />
             </Button>
             <Button
               variant="outline"
-              className="text-base leading-6 px-8 h-12 max-sm:w-full"
+              className="hover:text-green-800 border hover:border-green-800  text-base leading-6 px-8 h-12 max-sm:w-full"
             >
               <Play className="size-4 mr-2" />
               Watch demo

@@ -7,7 +7,7 @@ const SideDrawer = () => {
     <>
       <a
         href="#home"
-        className="font-semibold text-neutral-700 text-sm leading-5 border-solid flex items-center gap-2 hover:bg-green-900 rounded-lg px-2 pb-2 pt-1 hover:text-white transition-colors duration-200"
+        className="font-semibold text-neutral-700 text-sm leading-5 border-solid flex items-center gap-2 hover:bg-green-900 rounded-lg px-2 py-2 hover:text-white transition-colors duration-200"
       >
         <Home className="size-4" />
         Home
@@ -15,7 +15,7 @@ const SideDrawer = () => {
       <a
         href="#features"
         scroll-behavior="smooth"
-        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex pb-1 items-center gap-2 hover:bg-green-900 rounded-lg px-2 pb-2 pt-1 hover:text-white transition-colors duration-200"
+        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex items-center gap-2 hover:bg-green-900 rounded-lg px-2 py-2 hover:text-white transition-colors duration-200"
       >
         <Zap className="size-4" />
         Features
@@ -23,7 +23,7 @@ const SideDrawer = () => {
       <a
         href="#pricing"
         scroll-behavior="smooth"
-        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex pb-1 items-center gap-2 hover:bg-green-900 rounded-lg px-2 pb-2 pt-1 hover:text-white transition-colors duration-200"
+        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex items-center gap-2 hover:bg-green-900 rounded-lg px-2 py-2 hover:text-white transition-colors duration-200"
       >
         <DollarSign className="size-4" />
         Pricing
@@ -31,7 +31,7 @@ const SideDrawer = () => {
       <a
         href="#contact"
         scroll-behavior="smooth"
-        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex pb-1 items-center gap-2 hover:bg-green-900 rounded-lg px-2 pb-2 pt-1 hover:text-white transition-colors duration-200"
+        className="scroll-smooth font-medium text-neutral-700 text-sm leading-5 flex items-center gap-2 hover:bg-green-900 rounded-lg px-2 py-2 hover:text-white transition-colors duration-200"
       >
         <Mail className="size-4" />
         Contact

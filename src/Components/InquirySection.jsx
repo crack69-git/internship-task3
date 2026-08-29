@@ -22,7 +22,7 @@ const InquirySection = () => {
     console.log("Form Data:", data);
   };
   return (
-    <div id="contact" className="bg-neutral-100  my-20">
+    <div id="contact" className="bg-neutral-100  mt-20">
       <section className="w-11/12 mx-auto py-20">
         <div className="grid max-sm:grid-cols-1 grid-cols-2 gap-12">
           <div className="flex flex-col gap-4">

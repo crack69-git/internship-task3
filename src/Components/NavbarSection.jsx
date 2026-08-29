@@ -58,7 +58,7 @@ const NavbarSection = () => {
         </nav>
         <div className="flex items-center gap-2">
           <Button variant="secondary">Sign in</Button>
-          <Button>Try Free</Button>
+          <Button className="hover:bg-blue-700">Try Free</Button>
         </div>
       </div>
     </header>
