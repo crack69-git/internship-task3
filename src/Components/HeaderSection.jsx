@@ -44,11 +44,13 @@ const HeaderSection = () => {
         </div>
         <div className="relative  rounded-3xl  overflow-hidden animate__animated animate__fadeIn delay-1.5s">
           <img
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
             width="600"
             height="400"
-            src="/banner.webp"
+            src="/banner-lg.webp"
+            srcSet="/banner-sm.webp 600w, /banner-lg.webp 1000w"
+            sizes="(max-width: 640px) 100vw, 50vw"
             alt="Product dashboard"
             className="object-cover w-full h-auto min-h-70"
           />
