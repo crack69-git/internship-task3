@@ -2,17 +2,25 @@ import {
   Button,
   Card,
   CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  Checkbox,
+  Description,
+  FieldError,
+  FieldGroup,
+  Fieldset,
+  Form,
   Input,
   Label,
   TextArea,
+  TextField,
 } from "@heroui/react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const InquirySection = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log("Form Data:", data);
+  };
   return (
     <div id="contact" className="bg-neutral-100  my-20">
       <section className="w-11/12 mx-auto py-20">
@@ -66,64 +74,90 @@ const InquirySection = () => {
             </div>
           </div>
           <Card className="p-8 gap-6">
-            <CardHeader className="p-0 gap-1">
-              <CardTitle className="text-xl leading-7">Inquiry Form</CardTitle>
-              <Card.Description>We'd love to hear from you.</Card.Description>
-            </CardHeader>
             <CardContent className="p-0 gap-4">
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input id="name" placeholder="Jane Doe" defaultValue="" />
-                <span className="text-[#e7000b] text-xs leading-4">
-                  Name is required
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="jane@example.com"
-                  defaultValue=""
-                />
-                <span className="text-[#e7000b] text-xs leading-4">
-                  Enter a valid email address
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="phone">Phone Number</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder="+1 (555) 000-0000"
-                  className="border-neutral-200 border-0 border-solid"
-                  defaultValue=""
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="message">Message / Requirements</Label>
-                <TextArea
-                  id="message"
-                  placeholder="Tell us what you need..."
-                  className="min-h-24 border-neutral-200 border-0 border-solid"
-                  defaultValue=""
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <Checkbox id="agree" defaultChecked={false} />
-                <Label
-                  htmlFor="agree"
-                  className="text-neutral-500 text-sm leading-5"
-                >
-                  I agree to the terms and privacy policy
-                </Label>
-              </div>
+              <Form className="w-full " onSubmit={onSubmit}>
+                <Fieldset>
+                  <Fieldset.Legend className="text-xl leading-7">
+                    Inquiry Form
+                  </Fieldset.Legend>
+                  <Description>We'd love to hear from you.</Description>
+                  <FieldGroup>
+                    <TextField
+                      isRequired
+                      name="name"
+                      validate={(value) => {
+                        if (value.length < 3) {
+                          return "Name must be at least 3 characters";
+                        }
+                        return null;
+                      }}
+                    >
+                      <Label>Name</Label>
+                      <Input placeholder="John Doe" />
+                      <FieldError />
+                    </TextField>
+                    <TextField
+                      isRequired
+                      name="email"
+                      type="email"
+                      validate={(value) => {
+                        if (
+                          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                            value,
+                          )
+                        ) {
+                          return "Please enter a valid email address";
+                        }
+                        return null;
+                      }}
+                    >
+                      <Label>Email</Label>
+                      <Input placeholder="john@example.com" />
+                      <FieldError />
+                    </TextField>
+                    <TextField
+                      isRequired
+                      name="phoneNumber"
+                      type="tel"
+                      validate={(value) => {
+                        const phoneRegex = /^(\+880\s?\d{10}|0\d{10})$/;
+                        if (!phoneRegex.test(value)) {
+                          return "Please enter a valid phone number";
+                        }
+                        return null;
+                      }}
+                    >
+                      <Label>Phone Number</Label>
+                      <Input placeholder="+1 (555) 012-3456" />
+                      <FieldError />
+                    </TextField>
+                    <TextField
+                      isRequired
+                      name="bio"
+                      validate={(value) => {
+                        if (value.length < 10) {
+                          return "Bio must be at least 10 characters";
+                        }
+                        return null;
+                      }}
+                    >
+                      <Label>Bio</Label>
+                      <TextArea placeholder="Tell us about yourself..." />
+                      <Description>Minimum 10 characters</Description>
+                      <FieldError />
+                    </TextField>
+                  </FieldGroup>
+                  <Fieldset.Actions>
+                    <Button type="submit" className="bg-green-800">
+                      Submit Inquiry
+                    </Button>
+                    <Button type="reset" variant="danger">
+                      Reset Form
+                    </Button>
+                  </Fieldset.Actions>
+                </Fieldset>
+              </Form>
             </CardContent>
-            <CardFooter className="p-0">
-              <Button className="bg-neutral-900 text-neutral-50 w-full">
-                Submit Inquiry
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </section>

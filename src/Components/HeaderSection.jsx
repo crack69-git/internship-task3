@@ -12,7 +12,7 @@ const HeaderSection = () => {
           </Chip>
           <h1 className=" text-neutral-900 font-bold text-5xl leading-12 tracking-tight">
             Run your entire team from
-            <span className="text-neutral-900">one workspace</span>
+            <span className="text-neutral-900"> one workspace</span>
           </h1>
           <p className="text-neutral-500 text-lg leading-7">
             FlowSuite brings projects, docs, and communication together so your
