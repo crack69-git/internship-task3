@@ -1,4 +1,6 @@
 import { Boxes } from "lucide-react";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const FooterSection = () => {
   return (
@@ -20,17 +22,17 @@ const FooterSection = () => {
                 love.
               </p>
               <div className="flex items-center gap-2">
-                <div className="size-9 rounded-full bg-white text-neutral-500 flex justify-center items-center">
-                  {/* <FallbackComponent className="size-4" /> */}
+                <div className="size-9 rounded-full bg-white flex justify-center items-center">
+                  <FaFacebookF size={16} />
                 </div>
-                <div className="size-9 rounded-full bg-white text-neutral-500 flex justify-center items-center">
-                  {/* <FallbackComponent className="size-4" /> */}
+                <div className="size-9 rounded-full bg-white  flex justify-center items-center">
+                  <FaInstagram size={16} />
                 </div>
-                <div className="size-9 rounded-full bg-white text-neutral-500 flex justify-center items-center">
-                  {/* <FallbackComponent className="size-4" /> */}
+                <div className="size-9 rounded-full bg-white flex justify-center items-center">
+                  <FaLinkedinIn size={16} />
                 </div>
-                <div className="size-9 rounded-full bg-white text-neutral-500 flex justify-center items-center">
-                  {/* <FallbackComponent className="size-4" /> */}
+                <div className="size-9 rounded-full bg-white  flex justify-center items-center">
+                  <BsTwitterX size={16} />
                 </div>
               </div>
             </div>
